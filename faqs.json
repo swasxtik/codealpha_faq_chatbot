@@ -1,0 +1,72 @@
+[
+  {
+    "question": "What is HimDrive?",
+    "answer": "HimDrive is a ride-booking app built for hill routes across Himachal Pradesh, connecting riders with local drivers for both in-town trips and longer hill journeys.",
+    "keywords": ["about", "app", "what is himdrive"]
+  },
+  {
+    "question": "How do I book a ride?",
+    "answer": "Open the app, enter your pickup and drop locations, choose a ride type, and tap Book Ride. You'll see the driver's details and live ETA once a driver accepts.",
+    "keywords": ["book", "booking", "request ride", "new ride", "order a ride"]
+  },
+  {
+    "question": "What payment methods are supported?",
+    "answer": "You can pay using UPI, debit/credit cards, net banking, or HimWallet, our in-app wallet.",
+    "keywords": ["pay", "payment", "paying", "fare payment", "how to pay", "cost", "price"]
+  },
+  {
+    "question": "What is HimWallet?",
+    "answer": "HimWallet is an in-app wallet you can top up and use for rides. It also stores any refunds or cashback from promo codes.",
+    "keywords": ["wallet", "top up", "balance", "recharge"]
+  },
+  {
+    "question": "How do I apply a promo code?",
+    "answer": "On the payment screen, tap 'Add Promo Code', enter your code, and the discount will be applied to your fare before you confirm the ride.",
+    "keywords": ["promo", "coupon", "discount code", "offer"]
+  },
+  {
+    "question": "How does OTP login work?",
+    "answer": "Enter your registered mobile number, and we'll send a 6-digit OTP via SMS. Enter the OTP within 5 minutes to log in securely.",
+    "keywords": ["otp", "login", "log in", "sign in", "verification code"]
+  },
+  {
+    "question": "Can I book rides for hill routes outside city limits?",
+    "answer": "Yes, HimDrive supports intercity and hill-route bookings in addition to local rides. Fares for longer routes are shown upfront before you confirm.",
+    "keywords": ["intercity", "outstation", "hill route", "long distance", "outside city"]
+  },
+  {
+    "question": "How do I cancel a booking?",
+    "answer": "Go to your active ride screen and tap Cancel Ride. Cancellations made within 2 minutes of booking are free of charge.",
+    "keywords": ["cancel", "cancellation", "stop ride"]
+  },
+  {
+    "question": "Is there a cancellation fee?",
+    "answer": "A small cancellation fee may apply if you cancel after the driver has already started heading to your pickup location.",
+    "keywords": ["cancellation fee", "cancel charge", "penalty"]
+  },
+  {
+    "question": "How can I track my ride?",
+    "answer": "Once your ride is confirmed, you can track your driver's live location and estimated arrival time directly on the map screen.",
+    "keywords": ["track", "tracking", "live location", "eta", "where is my driver"]
+  },
+  {
+    "question": "What if my driver is late?",
+    "answer": "If your driver is significantly delayed, you can contact them directly through the in-app call feature or cancel without a fee.",
+    "keywords": ["late", "delay", "driver not arrived", "waiting", "no show"]
+  },
+  {
+    "question": "Do I need an account to book a ride?",
+    "answer": "Yes, you need to sign up with your mobile number and verify it via OTP before you can book a ride.",
+    "keywords": ["account", "sign up", "register", "registration"]
+  },
+  {
+    "question": "Can I schedule a ride in advance?",
+    "answer": "Yes, tap 'Schedule Ride' on the booking screen and choose your preferred date and time. We'll match you with a driver closer to that time.",
+    "keywords": ["schedule", "advance booking", "book later", "future ride", "tomorrow"]
+  },
+  {
+    "question": "How do I contact customer support?",
+    "answer": "You can reach support through the Help section in the app, or email support@himdrive.example for further assistance.",
+    "keywords": ["support", "help", "contact", "customer care", "complaint"]
+  }
+]

@@ -1,48 +1,67 @@
-# FAQ Chatbot (CodeAlpha Task 2)
+# 💬 FAQ Chatbot — CodeAlpha Task 2
 
-A lightweight FAQ chatbot using TF-IDF + cosine similarity to match user questions
-to the closest FAQ, served through a Streamlit chat UI. No external APIs, no GPU,
-no heavy models — deploys cleanly on Streamlit Community Cloud.
+A lightweight FAQ chatbot that matches user questions to the closest FAQ using TF-IDF and cosine similarity, served through a Streamlit chat interface. No external APIs, no GPU, no heavy models — just fast, deterministic text matching.
 
-## Files
+**🔗 Live App:** [codealphafaqchatbot-mzbjqfpwv9bg3jc7nw4eat.streamlit.app](https://codealphafaqchatbot-mzbjqfpwv9bg3jc7nw4eat.streamlit.app/)
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Purpose |
+|---|---|---|
+| Language | Python 3.10+ | Core implementation |
+| UI / App framework | [Streamlit](https://streamlit.io/) | Chat interface, session state, hosting on Streamlit Community Cloud |
+| NLP preprocessing | [NLTK](https://www.nltk.org/) | Stopword removal, `SnowballStemmer` for word stemming |
+| Matching engine | [scikit-learn](https://scikit-learn.org/) | `TfidfVectorizer` + `cosine_similarity` for intent matching |
+| Numerical ops | [NumPy](https://numpy.org/) | Vector similarity computations |
+| Data storage | JSON (`faqs.json`) | FAQ question/answer/keyword pairs — no database required |
+| Hosting | [Streamlit Community Cloud](https://share.streamlit.io/) | Free, GitHub-connected deployment |
+
+**How matching works:** each FAQ is enriched with related keywords, combined into a corpus, and vectorized with TF-IDF. A user's question is preprocessed the same way (lowercased, punctuation stripped, stopwords removed, stemmed) and compared against the corpus using cosine similarity. The highest-scoring FAQ above a confidence threshold is returned as the answer.
+
+---
+
+## 📁 Project Structure
 
 ```
-faq-chatbot/
-├── app.py                  # Streamlit app
-├── faqs.json                # FAQ dataset (swap in your own topic here)
-├── requirements.txt         # Pinned dependencies
-├── .streamlit/config.toml   # Theme config
+.
+├── app.py                  # Streamlit app (UI + matching logic)
+├── faqs.json                # FAQ dataset — question, answer, keywords
+├── requirements.txt          # Python dependencies
+├── .streamlit/config.toml    # Theme configuration
 └── README.md
 ```
 
-## Run locally
+---
+
+## ▶️ Run Locally
 
 ```bash
+git clone https://github.com/swasxtik/codealpha_faq_chatbot.git
+cd codealpha_faq_chatbot
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Deploy to Streamlit Community Cloud
+---
 
-1. Create a GitHub repo named `CodeAlpha_FAQChatbot` and push these files
-   (folder structure must be flattened into the repo root — `app.py` and
-   `faqs.json` should sit at the top level, not inside `faq-chatbot/`).
+## ☁️ Deploy on Streamlit Community Cloud
+
+1. Push this repo to GitHub (already done — see live link above).
 2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
 3. Click **New app**, select the repo/branch, and set **Main file path** to `app.py`.
-4. Click **Deploy**. Streamlit Cloud installs `requirements.txt` automatically —
-   no system packages (`packages.txt`) are needed for this project.
-5. First load will download NLTK's `stopwords` corpus once (cached afterward via
-   `st.cache_resource`); this happens automatically and needs no manual step.
+4. Click **Deploy** — `requirements.txt` is installed automatically, no `packages.txt` needed.
 
-## Customizing
+---
 
-- Swap `faqs.json` for your own question/answer pairs — no code changes needed.
-- Adjust the match confidence `threshold` in `get_answer()` inside `app.py` if
-  the bot is too strict or too lenient about what counts as a match.
+## ✨ Customizing
 
-## Why this task deploys easily
+- Swap `faqs.json` for your own question/answer/keyword sets — no code changes needed.
+- Tune the match confidence `threshold` inside `get_answer()` in `app.py` if the bot is too strict or too lenient.
 
-Unlike music generation (needs a trained model file + heavier ML libraries) or
-object detection (needs OpenCV system libraries, webcam/video handling, and
-CPU/GPU-specific code), this app only uses `scikit-learn` and `nltk` — both
-pure-Python-friendly, small, and fast to cold-start on Streamlit Cloud's free tier.
+---
+
+## 📌 About
+
+Built as part of the [CodeAlpha](https://www.codealpha.tech) Artificial Intelligence internship — Task 2: Chatbot for FAQs.

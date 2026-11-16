@@ -1,4 +1,4 @@
-# 💬 FAQ Chatbot — CodeAlpha Task 2
+# 💬 FAQ Chatbot 
 
 A lightweight FAQ chatbot that matches user questions to the closest FAQ using TF-IDF and cosine similarity, served through a Streamlit chat interface. No external APIs, no GPU, no heavy models — just fast, deterministic text matching.
 
